@@ -5,20 +5,20 @@
 
 
 class Account:
-    def __init__(self, accountNumber, balance): #constructor
-        self.accountNumber = accountNumber  #self är instancen eller objektet. self.accountNumber är alltså accountNumber som du passar som parameter vid instance
-        self.balance = balance #self är instancen eller objektet. self.balance är alltså balance som du passar som parameter vid instance
+    def __init__(self, accountNumber, balance):
+        self.accountNumber = accountNumber
+        self.balance = balance
                 
-    def increase_balance(self, accountNumber, amount): #WORKS
+    def increase_balance(self, accountNumber, amount):
         self.balance += amount
                 
-    def decrease_balance(self, accountNumber, amount): #works
+    def decrease_balance(self, accountNumber, amount):
         self.balance -= amount
     
-    def get_balance(self): #WORKS
+    def get_balance(self):
         return self.balance
     
-    def get_accountNumber(self): #WORKS
+    def get_accountNumber(self):
         return self.accountNumber
     
 
