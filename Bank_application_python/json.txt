@@ -1,0 +1,2 @@
+{"name": "Oscar", "password": "NyttL\u00f6senord", "accounts": [{"account_number": 28, "balance": 0}, {"account_number": 66, "balance": 0}]}
+{"name": "Emil", "password": "Nytt", "accounts": [{"account_number": 43, "balance": 0}, {"account_number": 85, "balance": 0}]}
