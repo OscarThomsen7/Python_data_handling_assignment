@@ -12,10 +12,10 @@ class Customer:
         self.accountList = []
         self.used_numbers = []
                        
-    def get_customer_name(self): #WORKS
+    def get_customer_name(self):
         return self.name
     
-    def get_customer_password(self): #WORKS
+    def get_customer_password(self):
         return self.password
     
     def get_accountlist_dict(self):
