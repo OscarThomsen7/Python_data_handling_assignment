@@ -13,7 +13,7 @@ class Bank:
         self.customerList = []
         self.currentCustomer = None
                    
-    def log_in(self, userName, passWord): #WORKS
+    def log_in(self, userName, passWord):
         for customer in self.customerList:
             if userName == customer.get_customer_name() and passWord == customer.get_customer_password():
                 self.currentCustomer = customer
@@ -22,21 +22,21 @@ class Bank:
             
         print("Wrong username or password!")
 
-    def log_out(self): #WORKS
+    def log_out(self):
         if self.currentCustomer == None:
             print("You are not logged in to an account")
         else:
             print(f"Logged out from {self.currentCustomer.get_customer_name()}'s account")
             self.currentCustomer = None
             
-    def add_customer(self, name, password): #WORKS
+    def add_customer(self, name, password):
         self.name = name
         self.password = password
         customer = Customer(self.name, self.password)
         self.customerList.append(Customer(customer.name, customer.password))
         print(f"Added new customer to bank \nUsername: {self.name} \nPassword: {self.password}")
         
-    def remove_customer(self, nameInput): #WORKS
+    def remove_customer(self, nameInput):
         for name in self.customerList:
             if nameInput == name.get_customer_name():
                 self.customerList.remove(name)
@@ -45,7 +45,7 @@ class Bank:
         print(f"'{nameInput}' does not exist in our customer database. Can not delete")
         
             
-    def get_customers(self): #WORKS
+    def get_customers(self):
         if len(self.customerList) > 0:
             i = 1
             print("List of bank customers \n")
@@ -55,13 +55,13 @@ class Bank:
         else:
             print("Bank has no customers")
             
-    def get_customer(self): #WORKS
+    def get_customer(self):
         for customer in self.customerList:
                 print(f"Customer username: {self.currentCustomer.get_customer_name()} \nPassword: {self.currentCustomer.get_customer_password()}")
                 self.get_all_accounts_and_balances()
                 return
         
-    def change_password(self, nameInput, newPassword): #WORKS
+    def change_password(self, nameInput, newPassword):
         for customer in self.customerList:
             if nameInput == customer.get_customer_name():
                 customer.password = newPassword
@@ -70,10 +70,10 @@ class Bank:
         print("Wrong username!")
         
 
-        #########################################################
+
         
         
-    def add_account_to_customer(self): #WORKS
+    def add_account_to_customer(self):
         randomAccNumber = random.randint(1,100)
         self.currentCustomer.used_numbers.append(randomAccNumber)
         if self.currentCustomer.used_numbers.count(randomAccNumber) > 1:
@@ -85,7 +85,7 @@ class Bank:
 
 
         
-    def get_all_accounts(self): #WORKS
+    def get_all_accounts(self):
         if len(self.currentCustomer.accountList) > 0:
             i = 1
             for accounts in self.currentCustomer.accountList:
@@ -94,11 +94,11 @@ class Bank:
         else:
             print("You have no accounts")
                     
-    def get_all_accounts_and_balances(self): #WORKS
+    def get_all_accounts_and_balances(self):
         for accounts in self.currentCustomer.accountList:
             print(f"Account {accounts.get_accountNumber()} has {accounts.get_balance()}$")
     
-    def deposit(self, accNum, amount): #WORKS
+    def deposit(self, accNum, amount):
         for account in self.currentCustomer.accountList:
             if accNum == account.get_accountNumber():
                 if amount < 0 or amount == 0:
@@ -113,7 +113,7 @@ class Bank:
         print("Wrong account number!")
         
         
-    def withdraw(self, accNum, amount): #WORKS
+    def withdraw(self, accNum, amount):
         for account in self.currentCustomer.accountList:
             if accNum == account.get_accountNumber():
                 if amount < 0 or amount == 0:
@@ -132,7 +132,7 @@ class Bank:
         
         
         
-    def remove_account(self, accountNumber): #WORKS
+    def remove_account(self, accountNumber):
         for account in self.currentCustomer.accountList:
             if accountNumber == account.get_accountNumber():
                 if account.balance > 0:
