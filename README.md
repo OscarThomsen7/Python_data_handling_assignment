@@ -1,1 +1,1 @@
-These are my school assignments/projects in Python.
+Python data handling school assignment with Numpy, Pandas and Matplotlib.
